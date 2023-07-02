@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Share Note{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        margin-left: 220px;
+        max-width: 600px;
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+    }
+    label {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    input{
+        display: block;
+        height: 50px;
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .btn-block {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container">
+    <h1>Share Note</h1>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required><br>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Share</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
