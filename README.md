@@ -15,7 +15,7 @@ Technologies Used:
 •	HTML and CSS: Used for creating the web pages and styling the application.
 •	SQLite: A lightweight and self-contained database engine storing the application's data.
 
-Installation
+Installation:
 1.	Clone the project repository.
 "git clone https://github.com/cswapnali/Django-NotesApp.git"
 2.	Install the project dependencies using pip.
@@ -35,7 +35,7 @@ Add the following lines to settings.py to configure media file handling:
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')"
 
-How to Use
+How to Use:
 To use this application:
 1.	Sign up for an account using the "Signup" page.
 2.	Login with your credentials on the "Login" page.
@@ -45,11 +45,11 @@ To use this application:
 6.	To share a note with another user, click on the "Share" button and enter the username of the user you want to share the note with.
 7.	To log out, click on the "Logout" button in the top-right corner.
 
-Screenshots 
+Screenshots: 
 Please refer to the following Google Drive link to access screenshots and a demo video of the application: 
 https://drive.google.com/drive/folders/1fvcWo5Wh-ADUaGiiNH6RujuvZYAo1QoC?usp=sharing
 
-Contact Information 
+Contact Information:
 •	GitHub: https://github.com/cswapnali/Django-NotesApp
 •	LinkedIn: https://www.linkedin.com/in/swapnali-choudhari/
 •	Portfolio: https://swapnalic14.pythonanywhere.com/
