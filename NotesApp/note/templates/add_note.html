@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block title %}Add Notes{% endblock title %}
+{% block content %}
+<style>
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 0;
+    }
+    label {
+        display: block;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    input,
+    select {
+        display: block;
+        height: 50px;
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    select#category {
+        margin-bottom: 10px;
+    }
+    input#content {
+        border: none; 
+    }
+    .row {
+        margin-top: 20px;
+    }
+    .col-md-12 {
+        text-align: center;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .btn-block {
+        width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+        .container {
+            max-width: 100%;
+            padding: 10px;
+        }
+        input,
+        select {
+            height: 40px;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+<div class="container">
+    <h1>Add Note</h1>
+    <hr>
+    <form method="post" enctype="multipart/form-data" action="/note/add/">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="" selected disabled>Select category</option>
+            <option value="text">Text</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+        </select>
+        <label for="content">Content:</label>
+        <input type="file" id="content" name="content" required><br>
+        <div class="row">
+            <div class="col-md-12"> 
+                <input type="submit" value="Add Note" class="btn btn-success btn-block">
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    {% if messages %}
+    {% for message in messages %}
+    var messageType = "{{ message.tags }}";
+    var messageText = "{{ message }}";
+    if (messageType === "success") {
+        alert(messageText);
+    } else if (messageType === "error") {
+        alert(messageText);
+    }
+    {% endfor %}
+    {% endif %}
+</script>
+{% endblock %}
