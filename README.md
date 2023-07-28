@@ -1,21 +1,21 @@
 # Django-NotesApp
-##Project Description:
+#Project Description:
 This project is a web application for managing and sharing notes. It is built using Django, a Python web framework, and utilizes Bootstrap for the frontend styling. The application allows users to sign up, log in, and manage their notes. Users can add new notes, view their existing notes, delete notes, and share notes with other users.
 
-##Key Features:
+#Key Features:
 •	User authentication: Sign up, log in, and log out functionality.
 •	Note creation: Users can create new notes by providing a title, category, and file uploading.
 •	Note listing: Users can view a list of their own notes and notes shared with them.
 •	Note sharing: Users can share their notes with other registered users.
 •	Note deletion: Users can delete their own notes or unshare notes shared with them.
 
-##Technologies Used:
+#Technologies Used:
 •	Django: Python web framework for building the backend of the application.
 •	Bootstrap: CSS framework used for frontend styling and responsive design.
 •	HTML and CSS: Used for creating the web pages and styling the application.
 •	SQLite: A lightweight and self-contained database engine storing the application's data.
 
-##Installation:
+#Installation:
 1.	Clone the project repository.
 "git clone https://github.com/cswapnali/Django-NotesApp.git"
 2.	Install the project dependencies using pip.
@@ -35,7 +35,7 @@ Add the following lines to settings.py to configure media file handling:
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')"
 
-##How to Use:
+#How to Use:
 To use this application:
 1.	Sign up for an account using the "Signup" page.
 2.	Login with your credentials on the "Login" page.
@@ -45,12 +45,17 @@ To use this application:
 6.	To share a note with another user, click on the "Share" button and enter the username of the user you want to share the note with.
 7.	To log out, click on the "Logout" button in the top-right corner.
 
-##Screenshots: 
+#Screenshots: 
 Please refer to the following Google Drive link to access screenshots and a demo video of the application: 
 https://drive.google.com/drive/folders/1fvcWo5Wh-ADUaGiiNH6RujuvZYAo1QoC?usp=sharing
 
-Contact Information:
+#Contact Information:
 •	GitHub: https://github.com/cswapnali/Django-NotesApp
 •	LinkedIn: https://www.linkedin.com/in/swapnali-choudhari/
 •	Portfolio: https://swapnalic14.pythonanywhere.com/
+
+
+
+
+
 
